@@ -8,7 +8,8 @@ export async function connect (){
             console.log('Mongoose connection established')
         })
     }
-    catch(err){
-        console.log('ERROR: Mongoose connection')
+    catch(err:any){
+        throw new Error(err.message);
+
     }
 }

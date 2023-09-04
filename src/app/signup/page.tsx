@@ -18,7 +18,7 @@ const SignUp = () => {
       const response = await axios.post("/api/signup", user);
       router.push("/login");
     } catch (err: any) {
-      console.log(err.message);
+      console.error(err.message);
     }
   };
   const handleChange = (e: any) => {
